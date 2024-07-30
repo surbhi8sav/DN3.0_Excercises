@@ -1,0 +1,63 @@
+import java .util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+public class Product {
+ int productId;
+ String productName;
+ double quantity, price;
+ Product(int productId, String productName,double quantity, double price)
+ {
+	 this.productId=productId;
+	 this.productName=productName;
+	 this.quantity=quantity;
+	 this.price=price;
+ }
+// void add()
+// {
+//	 
+//
+// }
+// void display()
+// {
+//	
+// }
+// void delete()
+// {
+//	 
+// }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    ArrayList <Product> ar = new ArrayList<Product>();
+    Scanner scanner = new Scanner(System.in);
+    int pid;
+    String pname;
+    double q,price;
+    while(true)
+    {
+     System.out.println("Do you want to add a new product? y/n:");
+     char c = scanner.next().charAt(0);
+     if(c=='y') {
+    	 System.out.println("Enter productId, quantity, price,productName");
+    	 pid= scanner.nextInt();
+    	 q=scanner.nextDouble();
+    	 price=scanner.nextDouble();
+    	 pname=scanner.nextLine();
+    	 System.out.println(price);
+    	 ar.add(new Product(pid,pname,q,price));
+    	 System.out.println(ar.get(0).productName);
+//    	 System.out.println("Do you want to add a new product? y/n:");
+//         c = scanner.next().charAt(0);
+         
+     }
+     else if(c=='n')
+     {
+    	 break;
+     
+    	 
+    	 
+     }
+    }
+    System.out.println(ar);
+	}
+
+}

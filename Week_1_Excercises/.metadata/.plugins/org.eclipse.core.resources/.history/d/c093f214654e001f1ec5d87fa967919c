@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class Order {
+	 String customerName;
+	 int orderId;
+	 double totalPrice;
+	 Order(int orderId, String customerName,double totalPrice)
+	 {
+		 this.orderId=orderId;
+		 this.customerName=customerName;
+	     this.totalPrice=totalPrice;
+	 }
+	 static void bubble_sort(Order[] or, double tp)
+	 {   Order temp;
+		 boolean isSwapped;
+		 for(int i=0; i<or.length-1;i++)
+		 {   
+			 isSwapped=false;
+			 for(int j=0;j<or.length-1-i;j++)
+			 { if(or[j].totalPrice>or[j+1].totalPrice)
+			 {
+				temp=or[j+1];
+				or[j+1]=or[j];
+				or[j]=temp;
+				isSwapped=true;
+			 }
+			 if(isSwapped==false)
+				 break;
+				 
+			 }
+		 }
+	 }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter array size");
+		int n= scanner.nextInt();
+		Order[] ar = new Order[n];
+	    int oid;
+	    String cname;
+	    double tp;
+		for(int i=0;i<n;i++)
+	    {
+	        System.out.println("Do you want to add a new order? y/n:");
+	        char c = scanner.next().charAt(0);
+	        if(c=='y') {
+	       	 System.out.println("Enter OrderId, Customer Name,Total price");
+	       	 
+	       	 oid= scanner.nextInt();
+	       	 scanner.nextLine();
+	       	 cname=scanner.nextLine();
+	       	 //scanner.nextLine();
+	       	 tp=scanner.nextDouble();
+	       //	scanner.nextLine();
+	       	// System.out.println("YOU");
+	       	 Order o=new Order(oid,cname,tp);
+	       	 ar[i]=o;
+//	       	 System.out.println("Do you want to add a new product? y/n:");
+//	            c = scanner.next().charAt(0);
+	            
+	        }
+	        else if(c=='n')
+	        {
+	       	 break;
+	        
+	       	 
+	       	 
+	        }
+	       }
+	}
+
+}

@@ -1,0 +1,68 @@
+import java .util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+public class Product {
+ int quantity, productId; 
+ String productName;
+ double price;
+ Product(int productId, String productName,int quantity, double price)
+ {
+	 this.productId=productId;
+	 this.productName=productName;
+	 this.quantity=quantity;
+	 this.price=price;
+ }
+// void add()
+// {
+//	 
+//
+// }
+// void display()
+// {
+//	
+// }
+// void delete()
+// {
+//	 
+// }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    ArrayList <Product> ar = new ArrayList<Product>();
+    Scanner scanner = new Scanner(System.in);
+    int q,pid;
+    String pname;
+    double price;
+    while(true)
+    {
+     System.out.println("Do you want to add a new product? y/n:");
+     char c = scanner.next().charAt(0);
+     if(c=='y') {
+    	 System.out.println("Enter productId, quantity, price,productName");
+    	 
+    	 pid= scanner.nextInt();
+    	 q=scanner.nextInt();
+    	 price=scanner.nextDouble();
+    	 scanner.nextLine();
+    	 pname=scanner.nextLine();
+    	 ar.add(new Product(pid,pname,q,price));
+//    	 System.out.println("Do you want to add a new product? y/n:");
+//         c = scanner.next().charAt(0);
+         
+     }
+     else if(c=='n')
+     {
+    	 break;
+     
+    	 
+    	 
+     }
+    }
+    for(int i=0;i<ar.size();i++)
+    {   //System.out.println("you");
+    	System.out.println(ar.get(i).productId);
+    	System.out.println(ar.get(i).productName);
+    	System.out.println(ar.get(i).quantity);
+    	System.out.println(ar.get(i).price);
+	}
+
+}}

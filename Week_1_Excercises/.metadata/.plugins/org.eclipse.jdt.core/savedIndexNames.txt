@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+C:\Users\DELL\OneDrive\Desktop\Week_1_Excercises\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+4183563687.index
+2421951985.index
+1162210737.index
+1141954472.index
+1708893008.index
+1896866630.index
