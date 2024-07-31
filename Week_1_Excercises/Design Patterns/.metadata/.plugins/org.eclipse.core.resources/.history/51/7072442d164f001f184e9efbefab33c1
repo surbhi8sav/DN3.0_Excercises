@@ -1,0 +1,47 @@
+abstract class WordDocument {
+    public abstract void display();
+}
+abstract class PdfDocument {
+    public abstract void display();
+}
+abstract class ExcelDocument {
+    public abstract void display();
+}
+abstract class DocumentFactory {
+    public abstract void createDocument();
+}
+class Word extends DocumentFactory{
+	public void createDocument()
+	{   ConcreteWord cw=new ConcreteWord();
+	    cw.display();
+		System.out.println("Word Document created");
+	}
+}
+class ConcreteWord extends WordDocument {
+    @Override
+    public void display() {
+        System.out.println("This is Concrete Word A.");
+    }
+}
+class ConcretePdf extends PdfDocument {
+    @Override
+    public void display() {
+        System.out.println("This is Concrete Pdf A.");
+    }
+}
+class ConcreteExcel extends ExcelDocument {
+    @Override
+    public void display() {
+        System.out.println("This is Concrete Excel A.");
+    }
+}
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     Word w=new Word();
+     w.createDocument();
+	}
+
+}
